@@ -34,7 +34,7 @@ const BookMain = () => {
     
     return (
         <div className='bookdisplay'>
-            <h1>BOOK STORE MERN STACK</h1>
+            <div className="box"><h1>BOOK STORE MERN STACK</h1><Link to='/' className='logout'>Logout</Link></div>
            <table className='table'>
             <tr>
                 <th>Sno</th>

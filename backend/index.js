@@ -2,6 +2,7 @@ import express, { json } from 'express';
 import mongoose from 'mongoose';
 import { PORT, mongodburl } from './config.js';
 import bookroutes from './routes/Bookroutes.js';
+import loginroutes from './routes/Loginroutes.js';
 import cors from 'cors'
 
 const app = express();
@@ -11,6 +12,8 @@ app.use(cors({
     allowedHeaders:['Content-Type']
 }))
 app.use(express.json());
+
+app.use('/login',loginroutes)
 app.use('/books',bookroutes)
 
 
